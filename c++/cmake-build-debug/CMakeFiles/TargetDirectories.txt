@@ -1,0 +1,3 @@
+/home/scampit/software/ml/c++/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/scampit/software/ml/c++/cmake-build-debug/CMakeFiles/c__.dir
+/home/scampit/software/ml/c++/cmake-build-debug/CMakeFiles/edit_cache.dir
