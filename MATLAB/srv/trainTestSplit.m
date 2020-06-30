@@ -1,5 +1,5 @@
-function data = trainTestSplit(X, Y, trainingSize, randomState)
-%% TRAINTESTSPLIT trainTestSplit
+function [Xtrain, Ytrain, Xtest, Ytest] = ...
+%%  ... trainTestSplit
 % |trainTestSplit| separates the the predictors ( |X| ) and response ( |Y| ) 
 % variables into a training and test set. 
 % 
@@ -30,6 +30,7 @@ function data = trainTestSplit(X, Y, trainingSize, randomState)
 % 
 % |Ytest|:           A vector containing n * (1 - trainingSize) observations 
 % for testing the model.
+    trainTestSplit(X, Y, trainingSize, randomState)
     
     if nargin < 3
         trainingSize = 0.8;
@@ -56,7 +57,7 @@ function data = trainTestSplit(X, Y, trainingSize, randomState)
     idx = cvObj.test;
     
     % Split into training and test data based on training size specified
-    data.Xtest  = X(~idx, :); data.Xtrain = X(idx,  :);
-    data.Ytest  = Y(~idx, :); data.Ytrain = Y(idx,  :);
+    Xtest  = X(~idx, :); Xtrain = X(idx,  :);
+    Ytest  = Y(~idx, :); Ytrain = Y(idx,  :);
     
 end
